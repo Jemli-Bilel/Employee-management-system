@@ -37,7 +37,6 @@ public class EmployeeController {
         String mail = user.getMail();
         String password = user.getPassword();
         if ("admin@gmail.com".equals(mail) && "admin".equals(password)) {
-            model.addAttribute("listEmployees", employeeService.getAllEmployees());
             return "home";
         }
         model.addAttribute("invalidCredentials",true);
